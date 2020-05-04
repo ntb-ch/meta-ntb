@@ -9,9 +9,9 @@ LICENSE = "CLOSED"
 
 #FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRCREV = "cbe8838b27c1446260d0ba97157364eff46206a9"
-#SRCREV = "f6794756fb448ea38fe7ae575178b8729f512ec9"
-SRC_URI = "gitsm://github.com/zechenturm/flinklinux.git;branch=debug \
+# SRCREV = "cbe8838b27c1446260d0ba97157364eff46206a9"
+SRCREV = "f6794756fb448ea38fe7ae575178b8729f512ec9"
+SRC_URI = "gitsm://github.com/zechenturm/flinklinux.git \
 file://cb20.rbf \
 file://blacklist.conf \
 file://initflink \
@@ -23,7 +23,7 @@ inherit module
 
 export KERNELDIR="${KERNEL_SRC}"
 
-OEEXTRA_CFLAGS += "-D DBG"
+# OEEXTRA_CFLAGS += "-D DBG"
 
 FILES_${PN} += "/lib/firmware/cb20.rbf \
 				/etc/modprobe.d/blacklist.conf \
